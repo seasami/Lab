@@ -1,11 +1,10 @@
-#include <bits/stdc++.h>
+    #include <bits/stdc++.h>
 using namespace std;
 
-bool isEven(int n) {
+int giaiThua(int n) {
     int giaiThua = 1;
     for (int i = 1; i <= n; i++) giaiThua *= i;
-    if (giaiThua % 2) return false;
-    else return true;
+    return giaiThua;
 }
 
 void insertionSort(vector<int> &arr) {
@@ -25,9 +24,9 @@ int main() {
     cout << "1. Tinh giai thua cua n va kiem tra chan le." << endl;
     int n;
     cout << "Nhap n: "; cin >> n;
-    if (isEven(n)) cout << "Giai thua cua n la so chan." << endl;
-    else cout << "Giai thua cua n la so le." << endl;
-    cout << " " << endl;
+    cout << "Giai thua cua n: " << giaiThua(n) << endl;
+    if (giaiThua(n) % 2) cout << "n co giai thua la mot so chan." << endl;
+    else cout << "n co giai thua la mot so chan." << endl;
 
     cout << "2. Insertion Sort" << endl;
     int m;
