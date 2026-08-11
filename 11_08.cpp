@@ -2,14 +2,15 @@
 using namespace std;
 using ll = long long;
 
-int giaiThua(int n) {
-    if (n <= 0) return -1;
+ll giaiThua(int n) {
+    if (n < 0) return -1;
+    else if (!n) return 1;
     ll ans = 1;
-    for (int i = 1; i <= n; i++) ans *= i;
+    for (ll i = 1; i <= n; i++) ans *= i;
     return ans;
 }
 
-bool isEven(int n) {
+bool isEven(ll n) {
     if (n % 2) return false;
     else return true;
 }
@@ -35,7 +36,7 @@ int main() {
     if (ans == -1) cout << "n phai la so nguyen duong." << endl;
     else {
         cout << "Giai thua cua n: " << ans << endl;
-        if (isEven(giaiThua(n))) cout << "n co giai thua la mot so chan." << endl;
+        if (isEven(ans)) cout << "n co giai thua la mot so chan." << endl;
         else cout << "n co giai thua la mot so le." << endl;
     }
 
