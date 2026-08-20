@@ -48,7 +48,7 @@ void menu(int n) {
         case 1:
             int a;
             cout << "Nhap mot so nguyen duong khac 0: ";
-            fibonacci(a);
+            fib(a);
         break;
 
         case 2:
